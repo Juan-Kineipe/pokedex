@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { PokemonData } from "../../utils/pokemon-data";
 import { api } from "../../services/api";
 import { Navbar } from "../../components/navbar";
+import { Footer } from "../../components/footer";
 import { Card } from "../../components/card";
 import "./styles.scss";
 
@@ -48,6 +49,7 @@ export const Landing = () => {
           ))}
         </div>
       </main>
+      <Footer handleOffset={setOffset} />
     </>
   );
 };

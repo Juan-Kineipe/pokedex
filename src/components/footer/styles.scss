@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+
+  &__pages {
+    background: var(--color-gray);
+    border-radius: 15px;
+    padding: 0 25px;
+  }
+
+  &__btn {
+    background: transparent;
+    color: var(--color-dark);
+    font-size: 1rem;
+    padding: 10px;
+    border: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:first-of-type {
+      padding-right: 30px;
+    }
+
+    &:last-of-type {
+      padding-left: 30px;
+    }
+  }
+}
