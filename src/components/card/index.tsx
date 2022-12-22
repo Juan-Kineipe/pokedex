@@ -1,12 +1,26 @@
+import { useState } from "react";
 import { PokemonType } from "pokenode-ts";
 import { PokemonTypeColors } from "../../utils/pokemon-type-colors";
+import { PokemonData } from "../../utils/pokemon-data";
+import { Modal } from "../modal";
 import "./styles.scss";
 
 export const Card = (props: any) => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [modalInfo, setModalInfo] = useState<PokemonData>();
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+    setModalInfo(props.data);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <>
-      <div className="card">
+      <div className="card" onClick={handleOpenModal}>
         <img
           src={props.data.pokemon.sprites.front_default!}
           className="card__image"
@@ -28,6 +42,11 @@ export const Card = (props: any) => {
           </div>
         </div>
       </div>
+      <Modal
+        showModal={showModal}
+        data={modalInfo}
+        handleCloseModal={handleCloseModal}
+      />
     </>
   );
 };
