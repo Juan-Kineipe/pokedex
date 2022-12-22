@@ -5,7 +5,7 @@ export function CustomRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path="" element={<Landing />}></Route>
+        <Route path="/pokedex" element={<Landing />}></Route>
       </Routes>
     </Router>
   );
