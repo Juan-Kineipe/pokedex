@@ -1,5 +1,5 @@
-# Pokedex
-Made with ❤️ for practicing purposes only
+# Pokédex
+Pokédex made in React for practicing purposes only
 
 ![Screenshot](https://github.com/Juan-Kineipe/pokedex/blob/main/screenshot.png?raw=true)
 
