@@ -23,6 +23,10 @@
     border: 1px solid #888;
     border-radius: 5px;
     width: 600px;
+
+    @media screen and (max-width: 450px) {
+      grid-template-columns: auto;
+    }
   }
 
   &__header {
